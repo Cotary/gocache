@@ -41,6 +41,20 @@ func (c *Cache[T]) Get(ctx context.Context, key any) (T, error) {
 		return v, nil
 	}
 
+	var newT any = new(T)
+	var f, ok = newT.(interface {
+		Format(data any) error
+	})
+	if ok {
+		err = f.Format(value)
+		if err != nil {
+			return *new(T), err
+		}
+		if v, ok := newT.(*T); ok {
+			return *v, nil
+		}
+	}
+
 	return *new(T), nil
 }
 
