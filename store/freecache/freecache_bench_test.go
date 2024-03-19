@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
+	lib_store "github.com/Cotary/gocache/lib/v4/store"
 	"github.com/coocood/freecache"
-	lib_store "github.com/eko/gocache/lib/v4/store"
 )
 
 func BenchmarkFreecacheSet(b *testing.B) {

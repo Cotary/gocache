@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
+	lib_store "github.com/Cotary/gocache/lib/v4/store"
 	"github.com/bradfitz/gomemcache/memcache"
-	lib_store "github.com/eko/gocache/lib/v4/store"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )

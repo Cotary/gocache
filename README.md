@@ -1,6 +1,6 @@
-[![Test](https://github.com/eko/gocache/actions/workflows/all.yml/badge.svg?branch=master)](https://github.com/eko/gocache/actions/workflows/all.yml)
-[![GoDoc](https://godoc.org/github.com/eko/gocache?status.png)](https://godoc.org/github.com/eko/gocache)
-[![GoReportCard](https://goreportcard.com/badge/github.com/eko/gocache)](https://goreportcard.com/report/github.com/eko/gocache)
+[![Test](https://github.com/Cotary/gocache/actions/workflows/all.yml/badge.svg?branch=master)](https://github.com/Cotary/gocache/actions/workflows/all.yml)
+[![GoDoc](https://godoc.org/github.com/Cotary/gocache?status.png)](https://godoc.org/github.com/Cotary/gocache)
+[![GoReportCard](https://goreportcard.com/badge/github.com/Cotary/gocache)](https://goreportcard.com/report/github.com/Cotary/gocache)
 [![codecov](https://codecov.io/gh/eko/gocache/branch/master/graph/badge.svg)](https://codecov.io/gh/eko/gocache)
 
 Gocache
@@ -44,30 +44,30 @@ Here is what it brings in detail:
 To begin working with the latest version of gocache, you can import the library in your project:
 
 ```go
-go get github.com/eko/gocache/lib/v4
+go get github.com/Cotary/gocache/lib/v4
 ```
 
 and then, import the store(s) you want to use between all available ones:
 
 ```go
-go get github.com/eko/gocache/store/bigcache/v4
-go get github.com/eko/gocache/store/freecache/v4
-go get github.com/eko/gocache/store/go_cache/v4
-go get github.com/eko/gocache/store/hazelcast/v4
-go get github.com/eko/gocache/store/memcache/v4
-go get github.com/eko/gocache/store/pegasus/v4
-go get github.com/eko/gocache/store/redis/v4
-go get github.com/eko/gocache/store/rediscluster/v4
-go get github.com/eko/gocache/store/rueidis/v4
-go get github.com/eko/gocache/store/ristretto/v4
+go get github.com/Cotary/gocache/store/bigcache/v4
+go get github.com/Cotary/gocache/store/freecache/v4
+go get github.com/Cotary/gocache/store/go_cache/v4
+go get github.com/Cotary/gocache/store/hazelcast/v4
+go get github.com/Cotary/gocache/store/memcache/v4
+go get github.com/Cotary/gocache/store/pegasus/v4
+go get github.com/Cotary/gocache/store/redis/v4
+go get github.com/Cotary/gocache/store/rediscluster/v4
+go get github.com/Cotary/gocache/store/rueidis/v4
+go get github.com/Cotary/gocache/store/ristretto/v4
 ```
 
 Then, simply use the following import statements:
 
 ```go
 import (
-	"github.com/eko/gocache/lib/v4/cache"
-	"github.com/eko/gocache/store/redis/v4"
+	"github.com/Cotary/gocache/lib/v4/cache"
+	"github.com/Cotary/gocache/store/redis/v4"
 )
 ```
 
@@ -122,9 +122,9 @@ value := cacheManager.Get(ctx, "my-key")
 ```go
 import (
 	"github.com/dgraph-io/ristretto"
-	"github.com/eko/gocache/lib/v4/cache"
-	"github.com/eko/gocache/lib/v4/store"
-	ristretto_store "github.com/eko/gocache/store/ristretto/v4"
+	"github.com/Cotary/gocache/lib/v4/cache"
+	"github.com/Cotary/gocache/lib/v4/store"
+	ristretto_store "github.com/Cotary/gocache/store/ristretto/v4"
 )
 ristrettoCache, err := ristretto.NewCache(&ristretto.Config{
 	NumCounters: 1000,
@@ -448,8 +448,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/eko/gocache/lib/v4/cache"
-	"github.com/eko/gocache/lib/v4/store"
+	"github.com/Cotary/gocache/lib/v4/cache"
+	"github.com/Cotary/gocache/lib/v4/store"
 	"github.com/redis/go-redis/v9"
 )
 

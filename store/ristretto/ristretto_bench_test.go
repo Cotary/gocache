@@ -6,8 +6,8 @@ import (
 	"math"
 	"testing"
 
+	lib_store "github.com/Cotary/gocache/lib/v4/store"
 	"github.com/dgraph-io/ristretto"
-	lib_store "github.com/eko/gocache/lib/v4/store"
 )
 
 func BenchmarkRistrettoSet(b *testing.B) {
